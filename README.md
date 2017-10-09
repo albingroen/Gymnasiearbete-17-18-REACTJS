@@ -18,6 +18,9 @@ I terminalen på den platsen du vill clona till
 Därefter skriver du
 
 ```cd ´mappen där du har clonat till´```
+
+Och efter det
+
 ```npm init -y```
 
 Slutligen installerar du React och Next genom att skriva
