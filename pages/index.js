@@ -9,7 +9,7 @@ const Index = () => (
     <Nav />
     <div className="header">
       <div className="headerContent">
-        <h1 className="title">Search summoner</h1>
+        <h1 className="title">Search for summoner</h1>
         <Input />
       </div>
     </div>

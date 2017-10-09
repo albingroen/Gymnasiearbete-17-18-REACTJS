@@ -1,7 +1,7 @@
 {
   "name": "test",
   "version": "1.0.0",
-  "description": "",
+  "description": "Gymnasiearbete med ReactJS (nextjs)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,5 +14,14 @@
     "next": "^3.2.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albingroen/Gymnasiearbete-17-18-REACTJS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/albingroen/Gymnasiearbete-17-18-REACTJS/issues"
+  },
+  "homepage": "https://github.com/albingroen/Gymnasiearbete-17-18-REACTJS#readme"
 }
