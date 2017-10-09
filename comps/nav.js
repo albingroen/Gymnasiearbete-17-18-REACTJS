@@ -28,7 +28,7 @@ export class Nav extends React.Component {
             width: 100%;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: center;
           }
           ul {
             display: inline-block;
@@ -39,7 +39,8 @@ export class Nav extends React.Component {
           a {
             color: white;
             font-family: 'Roboto', sans-serif;
-            margin-right: 40px;
+            margin-right: 20px;
+            margin-left: 20px;
             text-decoration: none;
             font-weight: 300;
             text-transform: uppercase;
