@@ -10,15 +10,20 @@ Vi ska bygga en site där:
 ## Komma igång
 
 Börja med att clona repot genom att skriva
-`git clone https://github.com/albingroen/Gymnasiearbete-17-18-REACTJS.git`
+
+```git clone https://github.com/albingroen/Gymnasiearbete-17-18-REACTJS.git```
+
 I terminalen på den platsen du vill clona till
 
 Därefter skriver du
-`cd ´mappen där du har clonat till´`
-`npm init -y`
+
+```cd ´mappen där du har clonat till´```
+```npm init -y```
 
 Slutligen installerar du React och Next genom att skriva
-`npm install --save react-dom react next`
+
+```npm install --save react-dom react next```
 
 Kör servern genom att skriva
-`npm run dev`
+
+```npm run dev```
