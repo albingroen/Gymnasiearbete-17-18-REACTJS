@@ -6,7 +6,7 @@ export class Button extends React.Component {
     return (
       <div>
         <Link href="/about">
-          <button>Get started</button>
+          <button className="knapp">Search summoner</button>
         </Link>
         <style jsx>{`
           button {

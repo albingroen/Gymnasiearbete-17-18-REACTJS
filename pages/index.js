@@ -11,6 +11,7 @@ const Index = () => (
       <div className="headerContent">
         <h1 className="title">Search for summoner</h1>
         <Input />
+        <Button />
       </div>
     </div>
   </div>
