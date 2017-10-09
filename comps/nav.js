@@ -7,12 +7,50 @@ export class Nav extends React.Component {
       <div>
         <nav>
           <ul>
-            <li>Home</li>
-            <li>Contact</li>
-            <li>Search</li>
-            <li>Guides</li>
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
+            <li>
+              <a href="">Search</a>
+            </li>
+            <li>
+              <a href="">Guides</a>
+            </li>
           </ul>
         </nav>
+        <style jsx global>{`
+          nav {
+            height: 60px;
+            background: #222;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+          }
+          ul {
+            display: inline-block;
+          }
+          li {
+            display: inline-block;
+          }
+          a {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin-right: 40px;
+            text-decoration: none;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px;
+            opacity: 0.75;
+          }
+          a:hover {
+            opacity: 1;
+          }
+        `}</style>
       </div>
     )
   }

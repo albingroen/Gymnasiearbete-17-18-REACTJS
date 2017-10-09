@@ -33,6 +33,8 @@ const Index = () => (
           }
           .headerContent {
             text-align: center;
+            padding-left: 30px;
+            padding-right: 30px;
           }
           .title,
           .about-site {
