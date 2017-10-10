@@ -29,7 +29,6 @@ export class Nav extends React.Component {
             display: flex;
             align-items: center;
             justify-content: center;
-
             padding-top: 25px;
             z-index: 2;
           }
