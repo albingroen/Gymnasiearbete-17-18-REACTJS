@@ -24,12 +24,14 @@ export class Nav extends React.Component {
         <style jsx global>{`
           nav {
             height: 60px;
-            background: #222;
+            background: white;
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: fixed;
+
+            padding-top: 25px;
+            z-index: 2;
           }
           ul {
             display: inline-block;
@@ -38,19 +40,18 @@ export class Nav extends React.Component {
             display: inline-block;
           }
           a {
-            color: white;
+            color: #75aaff;
             font-family: 'Roboto', sans-serif;
             margin-right: 20px;
             margin-left: 20px;
             text-decoration: none;
-            font-weight: 300;
+            font-weight: 400;
             text-transform: uppercase;
             font-size: 12px;
-            letter-spacing: 2px;
-            opacity: 0.75;
+            letter-spacing: 1px;
           }
           a:hover {
-            opacity: 1;
+            color: #497dd1;
           }
         `}</style>
       </div>

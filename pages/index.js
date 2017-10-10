@@ -4,9 +4,6 @@ import { Helmet } from 'react-helmet'
 import { Button } from '../comps/button.js'
 import { Nav } from '../comps/nav.js'
 import { Input } from '../comps/input.js'
-import { Card1 } from '../comps/card.js'
-import { Card2 } from '../comps/card.js'
-import { Card3 } from '../comps/card.js'
 
 export default class Index extends React.Component {
   render() {
@@ -30,17 +27,14 @@ export default class Index extends React.Component {
             margin: 0;
           }
           body {
-            background: #222;
+            background: white;
           }
           .header {
-            height: 600px;
+            height: 80vh;
             widht: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: url('/static/Images/bg-new.png');
-            background-size: cover;
-            background-position: center;
 
           }
           .headerContent {
@@ -50,36 +44,34 @@ export default class Index extends React.Component {
           }
           .title,
           .about-site {
-            color: white;
-            font-family: 'Lato', sanss-serif;
-            font-weight: 300;
+            color: #222;
+            font-family: 'Roboto', sanss-serif;
+            font-weight: 400;
             font-size: 40px;
-            letter-spacing: 1px;
             margin-bottom: 20px;
           }
           .about-site {
-            olor: white;
             font-family: 'Lato', sanss-serif;
-            font-weight: 300;
-            font-size: 15px;
-            width: 400px
-            letter-spacing: 1px;
+            font-weight: 400;
+            font-size: 17px;
+            width: 400px            
             margin-bottom: 70px;
-            opacity: .4;
+            opacity: .5;
           }
         `}</style>
           </div>
         </div>
         <div className="content">
-          <Card1 />
-          <Card2 />
-          <Card3 />
           <style jsx>{`
             .content {
               display: flex;
               justify-content: center;
               align-items: center;
               flex-wrap: wrap;
+              height: 50vh;
+              width: 100%;
+              background: rgb(250, 250, 250);
+              border-top: 1px solid rgb(234, 234, 234);
             }
           `}</style>
         </div>

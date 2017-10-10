@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'next/link'
+import { Button } from './button'
 
 export class Input extends React.Component {
   render() {
@@ -19,27 +21,30 @@ export class Input extends React.Component {
             <option value="">Turkey</option>
             <option value="">North America</option>
           </select>
+          <Link href="#">
+            <Button />
+          </Link>
         </form>
         <style jsx global>{`
           input {
             font-size: 18px;
-            border-bottom: 0.5px solid rgba(255, 255, 255, 0.4) !important;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.4) !important;
             background: none;
             width: 250px;
-            padding-right: 100px;
+            padding-right: 30px;
+            padding-left: 5px;
             font-weight: 300;
             padding-bottom: 5px;
             letter-spacing: 1px;
             border: none;
             margin-bottom: 30px;
-            color: white;
-            font-family: 'Lato', sans-serif;
+            color: #222;
+            font-family: 'Roboto', sans-serif;
             transition: 0.2s ease-out 0.05s;
-            letter-spacing: 1px;
           }
           input:focus {
             outline: none;
-            border-bottom: 0.5px solid rgba(255, 255, 255, 0.8) !important;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 1) !important;
             transition: 0.2s ease-out 0.05;
           }
         `}</style>
