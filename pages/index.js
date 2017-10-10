@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { Helmet } from 'react-helmet'
 import { Button } from '../comps/button.js'
 import { Nav } from '../comps/nav.js'
 import { Input } from '../comps/input.js'
@@ -10,9 +9,6 @@ export default class Index extends React.Component {
   render() {
     return (
       <div>
-        <Helmet>
-          <title>League of legends stats - Albin Groen & Albin Iivari</title>
-        </Helmet>
         <Nav />
 
         <div className="header">
@@ -52,6 +48,10 @@ export default class Index extends React.Component {
             font-weight: 400;
             font-size: 40px;
             margin-bottom: 20px;
+          }
+          .title {
+            font-weight: 300!important;
+            letter-spacing: .5px; 
           }
           .about-site {
             font-family: 'Lato', sanss-serif;
