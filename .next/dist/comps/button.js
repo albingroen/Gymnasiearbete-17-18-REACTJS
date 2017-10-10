@@ -53,7 +53,7 @@ var Button = exports.Button = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement('div', {
-        'data-jsx': 358539723,
+        'data-jsx': 1281129294,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 7
@@ -62,14 +62,14 @@ var Button = exports.Button = function (_React$Component) {
           fileName: _jsxFileName,
           lineNumber: 8
         }
-      }, _react2.default.createElement('button', { className: 'knapp', 'data-jsx': 358539723,
+      }, _react2.default.createElement('button', { className: 'knapp', 'data-jsx': 1281129294,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 9
         }
-      }, 'Search summoner')), _react2.default.createElement(_style2.default, {
-        styleId: 358539723,
-        css: 'button[data-jsx="358539723"]{background:LightSeaGreen;border:none;color:white;font-family:\'Roboto\',sans-serif;padding:15px 40px 15px 40px;font-size:17px;font-weight:lighter;-webkit-letter-spacing:0.6px;-moz-letter-spacing:0.6px;-ms-letter-spacing:0.6px;letter-spacing:0.6px;cursor:pointer;-webkit-transition:0.1s ease-out 0s;transition:0.1s ease-out 0s;border-radius:3px}button[data-jsx="358539723"]:hover{background:DarkCyan;-webkit-transition:0.1s ease-out 0s;transition:0.1s ease-out 0s}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBzL2J1dHRvbi5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFVb0IsQUFHc0MsQUFhTCxvQkFDUSxLQWJoQixZQUNBLFlBQ3FCLGdDQUNMLEdBVzlCLHlCQVZpQixlQUNLLG9CQUNDLHFHQUNOLGVBQ2EsZ0VBQ1Ysa0JBQ3BCIiwiZmlsZSI6ImNvbXBzL2J1dHRvbi5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvYWxiaW5ncm9lbi9HeW1uYXNpZWFyYmV0ZS0xNy0xOC1SRUFDVEpTIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJ1xuaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0J1xuXG5leHBvcnQgY2xhc3MgQnV0dG9uIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcbiAgcmVuZGVyKCkge1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2PlxuICAgICAgICA8TGluayBocmVmPVwiL2Fib3V0XCI+XG4gICAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJrbmFwcFwiPlNlYXJjaCBzdW1tb25lcjwvYnV0dG9uPlxuICAgICAgICA8L0xpbms+XG4gICAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICAgICBidXR0b24ge1xuICAgICAgICAgICAgYmFja2dyb3VuZDogTGlnaHRTZWFHcmVlbjtcbiAgICAgICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgc2Fucy1zZXJpZjtcbiAgICAgICAgICAgIHBhZGRpbmc6IDE1cHggNDBweCAxNXB4IDQwcHg7XG4gICAgICAgICAgICBmb250LXNpemU6IDE3cHg7XG4gICAgICAgICAgICBmb250LXdlaWdodDogbGlnaHRlcjtcbiAgICAgICAgICAgIGxldHRlci1zcGFjaW5nOiAwLjZweDtcbiAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgICAgIHRyYW5zaXRpb246IDAuMXMgZWFzZS1vdXQgMHM7XG4gICAgICAgICAgICBib3JkZXItcmFkaXVzOiAzcHg7XG4gICAgICAgICAgfVxuICAgICAgICAgIGJ1dHRvbjpob3ZlciB7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kOiBEYXJrQ3lhbjtcbiAgICAgICAgICAgIHRyYW5zaXRpb246IDAuMXMgZWFzZS1vdXQgMHM7XG4gICAgICAgICAgfVxuICAgICAgICBgfTwvc3R5bGU+XG4gICAgICA8L2Rpdj5cbiAgICApXG4gIH1cbn1cbiJdfQ== */\n/*@ sourceURL=comps/button.js */'
+      }, 'Read more')), _react2.default.createElement(_style2.default, {
+        styleId: 1281129294,
+        css: 'button[data-jsx="1281129294"]{background:LightSeaGreen;border:none;color:white;font-family:\'Roboto\',sans-serif;padding:15px 40px 15px 30px;font-size:15px;font-weight:lighter;-webkit-letter-spacing:0.6px;-moz-letter-spacing:0.6px;-ms-letter-spacing:0.6px;letter-spacing:0.6px;cursor:pointer;-webkit-transition:0.1s ease-out 0s;transition:0.1s ease-out 0s;border-radius:3px}button[data-jsx="1281129294"]:hover{background:DarkCyan;-webkit-transition:0.1s ease-out 0s;transition:0.1s ease-out 0s}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBzL2J1dHRvbi5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFVb0IsQUFHc0MsQUFhTCxvQkFDUSxLQWJoQixZQUNBLFlBQ3FCLGdDQUNMLEdBVzlCLHlCQVZpQixlQUNLLG9CQUNDLHFHQUNOLGVBQ2EsZ0VBQ1Ysa0JBQ3BCIiwiZmlsZSI6ImNvbXBzL2J1dHRvbi5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvYWxiaW5ncm9lbi9HeW1uYXNpZWFyYmV0ZS0xNy0xOC1SRUFDVEpTIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJ1xuaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0J1xuXG5leHBvcnQgY2xhc3MgQnV0dG9uIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcbiAgcmVuZGVyKCkge1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2PlxuICAgICAgICA8TGluayBocmVmPVwiL2Fib3V0XCI+XG4gICAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJrbmFwcFwiPlJlYWQgbW9yZTwvYnV0dG9uPlxuICAgICAgICA8L0xpbms+XG4gICAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICAgICBidXR0b24ge1xuICAgICAgICAgICAgYmFja2dyb3VuZDogTGlnaHRTZWFHcmVlbjtcbiAgICAgICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgc2Fucy1zZXJpZjtcbiAgICAgICAgICAgIHBhZGRpbmc6IDE1cHggNDBweCAxNXB4IDMwcHg7XG4gICAgICAgICAgICBmb250LXNpemU6IDE1cHg7XG4gICAgICAgICAgICBmb250LXdlaWdodDogbGlnaHRlcjtcbiAgICAgICAgICAgIGxldHRlci1zcGFjaW5nOiAwLjZweDtcbiAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgICAgIHRyYW5zaXRpb246IDAuMXMgZWFzZS1vdXQgMHM7XG4gICAgICAgICAgICBib3JkZXItcmFkaXVzOiAzcHg7XG4gICAgICAgICAgfVxuICAgICAgICAgIGJ1dHRvbjpob3ZlciB7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kOiBEYXJrQ3lhbjtcbiAgICAgICAgICAgIHRyYW5zaXRpb246IDAuMXMgZWFzZS1vdXQgMHM7XG4gICAgICAgICAgfVxuICAgICAgICBgfTwvc3R5bGU+XG4gICAgICA8L2Rpdj5cbiAgICApXG4gIH1cbn1cbiJdfQ== */\n/*@ sourceURL=comps/button.js */'
       }));
     }
   }]);

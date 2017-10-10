@@ -6,7 +6,7 @@ export class Button extends React.Component {
     return (
       <div>
         <Link href="/about">
-          <button className="knapp">Search summoner</button>
+          <button className="knapp">Read more</button>
         </Link>
         <style jsx>{`
           button {
@@ -14,8 +14,8 @@ export class Button extends React.Component {
             border: none;
             color: white;
             font-family: 'Roboto', sans-serif;
-            padding: 15px 40px 15px 40px;
-            font-size: 17px;
+            padding: 15px 40px 15px 30px;
+            font-size: 15px;
             font-weight: lighter;
             letter-spacing: 0.6px;
             cursor: pointer;
