@@ -7,6 +7,8 @@ export class Card1 extends React.Component {
     return (
       <div>
         <div className="card1">
+          <div className="overlay" />
+
           <div className="cardContent">
             <h3>Esport filling out entire arenas.</h3>
             <Button />
@@ -15,14 +17,20 @@ export class Card1 extends React.Component {
                 height: 350px;
                 width: 300px;
                 margin: 20px;
-                color: white;
+                color: white
                 background-image: url('/static/Images/stadium.jpg');
                 background-size: cover;
                 background-position: center;
+                cursor: pointer;
+              }
+              .card1:hover .overlay {
+                background: rgba(0,0,0, .35);
               }
               .cardContent {
                 padding: 20px;
                 padding-top: 200px;
+                z-index: 2;
+                position: relative;
               }
               h3 {
                 font-family: 'Lato', sans-serif;
@@ -31,6 +39,15 @@ export class Card1 extends React.Component {
                 letter-spacing: 1px;
                 margin-bottom: 20px;
               }
+              .overlay {
+                height: 350px;
+                z-index: 0;
+                width: 300px;
+                background: rgba(0,0,0, .5);                
+                position: absolute;
+                transition: .2s ease-out 0s;
+              }
+              
             `}</style>
           </div>
         </div>
@@ -43,30 +60,15 @@ export class Card2 extends React.Component {
   render() {
     return (
       <div>
-        <div className="card2">
+        <div className="card2 card1">
+          <div className="overlay" />
+
           <div className="cardContent">
             <h3>Is VR coming to League of Legends?</h3>
             <Button />
             <style jsx global>{`
               .card2 {
-                height: 350px;
-                width: 300px;
-                margin: 20px;
-                color: white;
-                background-image: url('/static/Images/lol-vr.jpg');
-                background-size: cover;
-                background-position: center;
-              }
-              .cardContent {
-                padding: 20px;
-                padding-top: 200px;
-              }
-              h3 {
-                font-family: 'Lato', sans-serif;
-                font-size: 25px;
-                font-weight: 300;
-                letter-spacing: 1px;
-                margin-bottom: 20px;
+                background-image: url('/static/Images/lol-vr.jpg') !important;
               }
             `}</style>
           </div>
@@ -80,30 +82,15 @@ export class Card3 extends React.Component {
   render() {
     return (
       <div>
-        <div className="card3">
+        <div className="card3 card1">
+          <div className="overlay" />
+
           <div className="cardContent">
             <h3>What's actually a real sport?</h3>
             <Button />
             <style jsx global>{`
               .card3 {
-                height: 350px;
-                width: 300px;
-                margin: 20px;
-                color: white;
-                background-image: url('/static/Images/benches.jpg');
-                background-size: cover;
-                background-position: center;
-              }
-              .cardContent {
-                padding: 20px;
-                padding-top: 200px;
-              }
-              h3 {
-                font-family: 'Lato', sans-serif;
-                font-size: 25px;
-                font-weight: 300;
-                letter-spacing: 1px;
-                margin-bottom: 20px;
+                background-image: url('/static/Images/benches.jpg') !important;
               }
             `}</style>
           </div>

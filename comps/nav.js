@@ -29,6 +29,7 @@ export class Nav extends React.Component {
             display: flex;
             align-items: center;
             justify-content: center;
+            position: fixed;
           }
           ul {
             display: inline-block;
