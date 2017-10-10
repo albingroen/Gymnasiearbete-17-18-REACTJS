@@ -10,7 +10,7 @@ export class Button extends React.Component {
         </Link>
         <style jsx>{`
           button {
-            background: LightSeaGreen;
+            background: #75aaff;
             border: none;
             color: white;
             font-family: 'Roboto', sans-serif;
@@ -23,7 +23,7 @@ export class Button extends React.Component {
             border-radius: 3px;
           }
           button:hover {
-            background: DarkCyan;
+            background: #639fff;
             transition: 0.1s ease-out 0s;
           }
         `}</style>

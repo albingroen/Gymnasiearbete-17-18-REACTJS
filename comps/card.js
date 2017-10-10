@@ -18,13 +18,14 @@ export class Card1 extends React.Component {
                 width: 300px;
                 margin: 20px;
                 color: white
-                background-image: url('/static/Images/stadium.jpg');
+                background-image: url('/static/Images/stadium-min.jpg');
+                image-resolution: 72dpi;
                 background-size: cover;
                 background-position: center;
                 cursor: pointer;
               }
               .card1:hover .overlay {
-                background: rgba(0,0,0, .35);
+                background: rgba(0,0,0, .5)
               }
               .cardContent {
                 padding: 20px;
@@ -68,7 +69,7 @@ export class Card2 extends React.Component {
             <Button />
             <style jsx global>{`
               .card2 {
-                background-image: url('/static/Images/lol-vr.jpg') !important;
+                background-image: url('/static/Images/lol-vr-min.jpg') !important;
               }
             `}</style>
           </div>
@@ -90,7 +91,7 @@ export class Card3 extends React.Component {
             <Button />
             <style jsx global>{`
               .card3 {
-                background-image: url('/static/Images/benches.jpg') !important;
+                background-image: url('/static/Images/benches-min.jpg') !important;
               }
             `}</style>
           </div>
