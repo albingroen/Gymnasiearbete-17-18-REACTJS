@@ -46,7 +46,7 @@ export class Nav extends React.Component {
             text-decoration: none;
             font-weight: 400;
             text-transform: uppercase;
-            font-size: 12px;
+            font-size: 13px;
             letter-spacing: 1px;
           }
           a:hover {

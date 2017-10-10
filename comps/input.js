@@ -28,11 +28,10 @@ export class Input extends React.Component {
         <style jsx global>{`
           input {
             font-size: 18px;
-            border-bottom: 0.5px solid rgba(0, 0, 0, 0.4) !important;
+            border-bottom: 0.5px dashed rgba(0, 0, 0, 0.4) !important;
             background: none;
             width: 250px;
             padding-right: 30px;
-            padding-left: 5px;
             font-weight: 300;
             padding-bottom: 5px;
             letter-spacing: 1px;
@@ -44,7 +43,7 @@ export class Input extends React.Component {
           }
           input:focus {
             outline: none;
-            border-bottom: 0.5px solid rgba(0, 0, 0, 1) !important;
+            border-bottom: 0.5px dashed rgba(0, 0, 0, 0.99) !important;
             transition: 0.2s ease-out 0.05;
           }
         `}</style>

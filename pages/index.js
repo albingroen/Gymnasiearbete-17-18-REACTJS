@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import { Button } from '../comps/button.js'
 import { Nav } from '../comps/nav.js'
 import { Input } from '../comps/input.js'
+import { Scrollhint } from '../comps/scrollHint.js'
 
 export default class Index extends React.Component {
   render() {
@@ -13,6 +14,7 @@ export default class Index extends React.Component {
           <title>League of legends stats - Albin Groen & Albin Iivari</title>
         </Helmet>
         <Nav />
+
         <div className="header">
           <div className="headerContent">
             <h1 className="title">Search for summoner</h1>
@@ -21,6 +23,7 @@ export default class Index extends React.Component {
               about the player.
             </p>
             <Input />
+            <Scrollhint />
             <style jsx global>{`
           * {
             padding: 0;
