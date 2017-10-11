@@ -17,16 +17,15 @@ I terminalen på den platsen du vill clona till
 
 Därefter skriver du
 
-```cd ´mappen där du har clonat till´```
+```cd Gymnasiearbete-17-18-REACTJS```
 
-Och efter det
 
-```npm init -y```
+Och efter det installerar du alla paket vi använder, bl.a React och Next, genom att skriva
 
-Slutligen installerar du React och Next genom att skriva
+```npm install```
 
-```npm install --save react-dom react next```
-
-Kör servern genom att skriva
+Slutligen kan du köra servern i utvecklar-läge genom att skriva
 
 ```npm run dev```
+
+När man kör servern i utvecklarläge så uppdateras koden automatiskt i webbläsaren när man sparar.
