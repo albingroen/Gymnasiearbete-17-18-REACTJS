@@ -6,21 +6,10 @@ import { Input } from '../comps/input.js'
 import { Scrollhint } from '../comps/scrollHint.js'
 
 class Index extends React.Component {
-  state = { name: null } // här är vad `this.state.name` är satt till i början
-  componentDidMount() {
-    if (process.browser) {
-      const name = window.prompt('Name?')
-      this.setState({ name: name })
-    }
-  }
   render() {
-    const { name } = this.state
     return (
       <div>
-        <div>name: {name}</div>
-
         <Nav />
-        {/* <h1>{name}</h1> */}
         <div className="header">
           <div className="headerContent">
             <h1 className="title">Search for summoner</h1>
