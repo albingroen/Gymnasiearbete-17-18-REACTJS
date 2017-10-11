@@ -64,9 +64,15 @@ export class Nav extends React.Component {
             color: #222 !important;
             opacity: 0.5;
           }
+          .right:hover {
+            opacity: 0.75;
+          }
           .right-right {
             color: #222 !important;
             opacity: 0.5;
+          }
+          .right-right:hover {
+            opacity: 0.75;
           }
           a:hover {
             color: #497dd1;
