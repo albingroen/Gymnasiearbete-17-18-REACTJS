@@ -20,7 +20,7 @@ Därefter skriver du
 ```cd Gymnasiearbete-17-18-REACTJS```
 
 
-Och efter det installerar alla paket vi använder, bl.a React och Next, genom att skriva
+Och efter det installerar du alla paket vi använder, bl.a React och Next, genom att skriva
 
 ```npm install```
 
