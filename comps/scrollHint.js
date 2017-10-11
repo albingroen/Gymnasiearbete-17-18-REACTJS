@@ -7,7 +7,7 @@ export class Scrollhint extends React.Component {
         <div className="scroll" />
         <style jsx global>{`
           .mouse {
-            height: 15px;
+            height: 13px;
             width: 10px;
             border: 1px solid #444;
             padding-top: 5px;
