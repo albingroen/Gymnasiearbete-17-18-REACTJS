@@ -5,54 +5,77 @@ export class Nav extends React.Component {
   render() {
     return (
       <div>
-        <nav>
-          <ul>
-            <li>
-              <a href="">Home</a>
-            </li>
-            <li>
-              <a href="">Contact</a>
-            </li>
-            <li>
-              <a href="">Search</a>
-            </li>
-            <li>
-              <a href="">Guides</a>
-            </li>
-            <li>
-              <a className="right" href="">
-                Games
-              </a>
-            </li>
-            <li>
-              <a className="right-right" href="">
-                Players
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <div className="content">
+          <nav>
+            <ul>
+              <li>
+                <Link href="/">
+                  <a href="">Home</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="">
+                  <a href="">Contact</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="">
+                  <a href="">Search</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="">
+                  <a href="">Guides</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="">
+                  <a className="right" href="">
+                    Games
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="">
+                  <a className="right-right" href="">
+                    Players
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="">
+                  <a className="right-right" href="">
+                    Players
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
         <style jsx global>{`
+          .content {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+          }
           nav {
-            height: 60px;
-            background: white;
             width: 100%;
             display: flex;
-            align-items: center;
             justify-content: center;
-            padding-top: 25px;
-            z-index: 2;
+            margin-top: 40px;
           }
           ul {
             display: inline-block;
           }
           li {
             display: inline-block;
+            padding: 20px;
           }
           a {
-            color: #75aaff;
+            color: #222;
             font-family: 'Roboto', sans-serif;
-            margin-right: 15px;
-            margin-left: 15px;
             text-decoration: none;
             font-weight: 400;
             text-transform: uppercase;
@@ -60,9 +83,9 @@ export class Nav extends React.Component {
             letter-spacing: 1px;
           }
           .right {
-            margin-left: 130px;
             color: #222 !important;
             opacity: 0.5;
+            padding-left: 100px;
           }
           .right:hover {
             opacity: 0.75;
@@ -75,7 +98,7 @@ export class Nav extends React.Component {
             opacity: 0.75;
           }
           a:hover {
-            color: #497dd1;
+            color: #08cc8b;
           }
         `}</style>
       </div>

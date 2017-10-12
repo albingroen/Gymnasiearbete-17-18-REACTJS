@@ -5,10 +5,12 @@ export class Button extends React.Component {
   render() {
     return (
       <div>
-        <button className="knapp">Search</button>
+        <Link href="/dashboard">
+          <button className="knapp">Search</button>
+        </Link>
         <style jsx>{`
           button {
-            background: #0069ff;
+            background: #00c281;
             border: none;
             color: white;
             font-family: 'Roboto', sans-serif;
@@ -24,7 +26,7 @@ export class Button extends React.Component {
             text-transform: uppercase;
           }
           button:hover {
-            background: #639fff;
+            background: #08cc8b;
             transition: 0.1s ease-out 0s;
           }
           button:focus {
