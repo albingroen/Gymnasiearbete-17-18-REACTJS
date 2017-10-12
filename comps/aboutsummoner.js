@@ -85,15 +85,24 @@ export class About extends React.Component {
         <style jsx>{`
           .contentd {
             display: flex;
-            width: 740px;
-            // background: lightgrey;
+            width: 80%;
             margin: 0 auto;
-            justify-content: flex-end;
+            justify-content: center;
           }
           @media screen and (max-width: 1000px) {
             .contentd {
               width: 80%;
             }
+          }
+          h3,
+          p {
+            font-weight: normal;
+            font-family: 'Roboto', sans-serif;
+          }
+          p {
+            opacity: 0.5;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
           }
         `}</style>
       </div>

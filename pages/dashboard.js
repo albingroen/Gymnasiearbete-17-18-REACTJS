@@ -73,6 +73,7 @@ export default class eashboard extends React.Component {
       <div>
         <Nav />
         <About />
+        <div className="line" />
         <div className="contenth">
           <div className="header">
             <div className="headerContent">
@@ -124,6 +125,12 @@ export default class eashboard extends React.Component {
                 padding-right: 20px;
                 margin-bottom: 70px;
                 opacity: 0.5;
+              }
+              .line {
+                height: 0.5px;
+                background: rgba(0, 0, 0, 0.1);
+                width: 100%;
+                margin-top: 10px;
               }
             `}</style>
           </div>

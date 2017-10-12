@@ -42,20 +42,20 @@ export class Nav extends React.Component {
                   </a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="">
                   <a className="right-right" href="">
                     Players
                   </a>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>
 
         <style jsx global>{`
           .content {
-            width: 1000px;
+            width: 80%;
             margin: 0 auto;
             display: flex;
             justify-content: center;
@@ -99,6 +99,11 @@ export class Nav extends React.Component {
           }
           a:hover {
             color: #08cc8b;
+          }
+          @media screen and (max-width: 800px) {
+            nav {
+              display: none;
+            }
           }
         `}</style>
       </div>
