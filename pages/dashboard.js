@@ -44,7 +44,7 @@ import { About } from '../comps/aboutsummoner.js'
 //             margin-bottom: 20px;
 //           }
 //           .title {
-//             font-weight: 300!important;
+//             font-weight: normal;
 //             letter-spacing: .5px;
 //             text-align: center;
 //             margin-top: 100px;
