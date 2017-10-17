@@ -49,7 +49,7 @@ class Index extends React.Component {
               .about-site {
                 color: #222;
                 font-family: 'Roboto', sanss-serif;
-                font-weight: 400;
+                font-weight: normal;
                 font-size: 40px;
                 margin-bottom: 20px;
               }
