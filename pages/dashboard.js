@@ -2,13 +2,25 @@ import React from 'react'
 import Link from 'next/link'
 import { Nav } from '../comps/nav.js'
 import { About } from '../comps/aboutsummoner.js'
+import 'isomorphic-fetch'
 
-export default class eashboard extends React.Component {
+export default class dashboard extends React.Component {
+  static async getInitialProps() {
+    let APIkey = 'RGAPI-d1aca85d-8b27-484e-b5f5-aabb485a5615'
+    const res = await fetch(
+      'https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/mevlut?api_key=' +
+        // 'https://na1.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/53292464?api_key=' +
+        APIkey,
+    )
+    const json = await res.json()
+    console.log('info', json)
+    return { name: json.name, level: json.summonerLevel }
+  }
   render() {
     return (
       <div>
         <Nav />
-        <About />
+        <About name={this.props.name} level={this.props.level} />
         <div className="line" />
         <div className="contenth">
           <div className="header">
@@ -18,6 +30,7 @@ export default class eashboard extends React.Component {
                 This is a summary of the latest games<br />played by this
                 specific summoner.
               </p>
+              {/* <p>{this.props.info}</p> */}
             </div>
             <style jsx global>{`
               .contenth {

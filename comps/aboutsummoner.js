@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import 'isomorphic-fetch'
 
 // export class About extends React.Component {
 //   render() {
@@ -58,16 +59,24 @@ import Link from 'next/link'
 // }
 
 export class About extends React.Component {
+  // static async getInitialProps() {
+  //   // eslint-disable-next-line no-undef
+  //   const res = await fetch(
+  //     'https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/fearak?api_key=RGAPI-d1aca85d-8b27-484e-b5f5-aabb485a5615',
+  //   )
+  //   const json = await res.json()
+  //   return { info: json.name }
+  // }
   render() {
     return (
       <div className="contentd">
         <ul>
           <li>
-            <h3 className="summonerName">Summoner</h3>
+            <h3 className="summonerName">{this.props.name}</h3>
           </li>
           <li>
             <p>Rank</p>
-            <h3>Silver IV</h3>
+            <h3 className="summonerLevel">{this.props.level}</h3>
           </li>
           <li>
             <p>Champ</p>
