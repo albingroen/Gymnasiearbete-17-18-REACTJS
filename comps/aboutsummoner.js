@@ -84,7 +84,7 @@ export class About extends React.Component {
           </li>
           <li>
             <p>Wins</p>
-            <h3>87</h3>
+            <h3 className="summonerScore">87</h3>
           </li>
           <li>
             <p>Ranked</p>

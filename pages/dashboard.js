@@ -6,22 +6,39 @@ import 'isomorphic-fetch'
 
 export default class dashboard extends React.Component {
   static async getInitialProps() {
-    let APIkey = 'RGAPI-d1aca85d-8b27-484e-b5f5-aabb485a5615'
-    const res = await fetch(
-      'https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/mevlut?api_key=' +
-        // 'https://na1.api.riotgames.com/lol/champion-mastery/v3/scores/by-summoner/53292464?api_key=' +
-        APIkey,
+    const APIkey = 'RGAPI-2fff2e48-dcc8-4f82-8dc7-a65594d189d8'
+    const region = 'na1'
+    const name = 'oscar'
+    const summonerRequest = await fetch(
+      `https://${region}.api.riotgames.com/lol/summoner/v3/summoners/by-name/${name}?api_key=${APIkey}`,
     )
-    const json = await res.json()
-    console.log('info', json)
-    return { name: json.name, level: json.summonerLevel }
+    const summoner = await summonerRequest.json()
+    const recentRequest = await fetch(
+      `https://${region}.api.riotgames.com/lol/match/v3/matchlists/by-account/${summoner.accountId}/recent?api_key=${APIkey}`,
+    )
+
+    const recent = await recentRequest.json()
+    console.log(recent)
+
+    return {
+      name: summoner.name,
+      level: summoner.summonerLevel,
+      recentMatches: recent.matches,
+    }
   }
   render() {
     return (
       <div>
         <Nav />
-        <About name={this.props.name} level={this.props.level} />
+        <About
+          name={this.props.name}
+          level={this.props.level}
+          score={this.props.score}
+        />
         <div className="line" />
+        {this.props.recentMatches.map(match => {
+          return <div>{match.lane}</div>
+        })}
         <div className="contenth">
           <div className="header">
             <div className="headerContent">
@@ -30,6 +47,7 @@ export default class dashboard extends React.Component {
                 This is a summary of the latest games<br />played by this
                 specific summoner.
               </p>
+              <p>{this.props.score}</p>
               {/* <p>{this.props.info}</p> */}
             </div>
             <style jsx global>{`
