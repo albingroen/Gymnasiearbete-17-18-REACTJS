@@ -79,8 +79,8 @@ export class About extends React.Component {
             <h3 className="summonerLevel">{this.props.level}</h3>
           </li>
           <li>
-            <p>Champ</p>
-            <h3>Ashe</h3>
+            <p>League</p>
+            <h3 className="summonerLane">Test</h3>
           </li>
           <li>
             <p>Wins</p>

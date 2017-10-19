@@ -6,35 +6,38 @@ import 'isomorphic-fetch'
 
 export default class dashboard extends React.Component {
   static async getInitialProps() {
-    const APIkey = 'RGAPI-2fff2e48-dcc8-4f82-8dc7-a65594d189d8'
-    const region = 'na1'
+    const APIkey = 'RGAPI-f8b0ce8a-32a9-4825-be3d-558f38ac4b01'
+    const region = 'euw1'
     const name = 'oscar'
     const summonerRequest = await fetch(
       `https://${region}.api.riotgames.com/lol/summoner/v3/summoners/by-name/${name}?api_key=${APIkey}`,
     )
     const summoner = await summonerRequest.json()
+
     const recentRequest = await fetch(
       `https://${region}.api.riotgames.com/lol/match/v3/matchlists/by-account/${summoner.accountId}/recent?api_key=${APIkey}`,
     )
-
     const recent = await recentRequest.json()
-    console.log(recent)
+
+    const winRequest = await fetch(
+      `https://${region}.api.riotgames.com/lol/league/v3/positions/by-summoner/${summoner.id}?api_key=${APIkey}`,
+    )
+    const win = await winRequest.json()
+    const firstwin = win[0]
+    console.log(firstwin)
 
     return {
       name: summoner.name,
       level: summoner.summonerLevel,
       recentMatches: recent.matches,
+      firstwin: firstwin,
     }
   }
   render() {
     return (
       <div>
         <Nav />
-        <About
-          name={this.props.name}
-          level={this.props.level}
-          score={this.props.score}
-        />
+        <About name={this.props.name} level={this.props.level} />
         <div className="line" />
 
         <div className="contenth">
@@ -46,8 +49,9 @@ export default class dashboard extends React.Component {
                 specific summoner.
               </p>
               {this.props.recentMatches.map(match => {
-                return <div>{match.lane}</div>
+                return <p>{match.lane}</p>
               })}
+              <p>{this.props.firstwin}</p>
             </div>
             <style jsx global>{`
               .contenth {
