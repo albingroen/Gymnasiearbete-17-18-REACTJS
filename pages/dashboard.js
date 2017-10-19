@@ -36,9 +36,7 @@ export default class dashboard extends React.Component {
           score={this.props.score}
         />
         <div className="line" />
-        {this.props.recentMatches.map(match => {
-          return <div>{match.lane}</div>
-        })}
+
         <div className="contenth">
           <div className="header">
             <div className="headerContent">
@@ -47,8 +45,9 @@ export default class dashboard extends React.Component {
                 This is a summary of the latest games<br />played by this
                 specific summoner.
               </p>
-              <p>{this.props.score}</p>
-              {/* <p>{this.props.info}</p> */}
+              {this.props.recentMatches.map(match => {
+                return <div>{match.lane}</div>
+              })}
             </div>
             <style jsx global>{`
               .contenth {
