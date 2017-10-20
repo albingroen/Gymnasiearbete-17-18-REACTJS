@@ -6,7 +6,7 @@ import 'isomorphic-fetch'
 
 export default class dashboard extends React.Component {
   static async getInitialProps() {
-    const APIkey = 'RGAPI-f8b0ce8a-32a9-4825-be3d-558f38ac4b01'
+    const APIkey = 'RGAPI-3b3f932b-e4c1-4867-949d-a57c082ac171'
     const region = 'euw1'
     const name = 'oscar'
     const summonerRequest = await fetch(
