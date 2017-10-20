@@ -19,6 +19,7 @@ export default class dashboard extends React.Component {
       `https://${region}.api.riotgames.com/lol/match/v3/matchlists/by-account/${summoner.accountId}/recent?api_key=${APIkey}`,
     )
     const recent = await recentRequest.json()
+    const latestMatches = recent[0]
 
     const leagueRequest = await fetch(
       `https://${region}.api.riotgames.com/lol/league/v3/positions/by-summoner/${summoner.id}?api_key=${APIkey}`,
@@ -26,11 +27,13 @@ export default class dashboard extends React.Component {
     const league = await leagueRequest.json()
     const latestLeagues = league[0]
 
+
     return {
       name: summoner.name,
       level: summoner.summonerLevel,
-      recentMatches: recent.matches,
+      laneLatestMatch: latestMatches.lane,
       winsLatestLeague: latestLeagues.wins,
+
     }
   }
   render() {
@@ -48,9 +51,8 @@ export default class dashboard extends React.Component {
                 This is a summary of the latest games<br />played by this
                 specific summoner.
               </p>
-              {this.props.recentMatches.map(match => {
-                return <p>{match.lane}</p>
-              })}
+          
+              <p>{this.props.laneLatestMatch}</p>
               <p>{this.props.winsLatestLeague}</p>
             </div>
             <style jsx global>{`
