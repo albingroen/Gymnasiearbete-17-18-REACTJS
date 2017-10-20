@@ -9,6 +9,7 @@ export default class dashboard extends React.Component {
     const APIkey = 'RGAPI-3b3f932b-e4c1-4867-949d-a57c082ac171'
     const region = 'euw1'
     const name = 'oscar'
+
     const summonerRequest = await fetch(
       `https://${region}.api.riotgames.com/lol/summoner/v3/summoners/by-name/${name}?api_key=${APIkey}`,
     )
@@ -19,18 +20,17 @@ export default class dashboard extends React.Component {
     )
     const recent = await recentRequest.json()
 
-    const winRequest = await fetch(
+    const leagueRequest = await fetch(
       `https://${region}.api.riotgames.com/lol/league/v3/positions/by-summoner/${summoner.id}?api_key=${APIkey}`,
     )
-    const win = await winRequest.json()
-    const firstwin = win[0]
-    console.log(firstwin)
+    const league = await leagueRequest.json()
+    const latestLeagues = league[0]
 
     return {
       name: summoner.name,
       level: summoner.summonerLevel,
       recentMatches: recent.matches,
-      firstwin: firstwin,
+      winsLatestLeague: latestLeagues.wins,
     }
   }
   render() {
@@ -51,7 +51,7 @@ export default class dashboard extends React.Component {
               {this.props.recentMatches.map(match => {
                 return <p>{match.lane}</p>
               })}
-              <p>{this.props.firstwin}</p>
+              <p>{this.props.winsLatestLeague}</p>
             </div>
             <style jsx global>{`
               .contenth {
