@@ -51,6 +51,10 @@ export class Input extends React.Component {
             ))}
           </select>
         </form>
+        <Link href="#">
+            <Button />
+          </Link>
+
 
         {/*Styling!*/}
 
