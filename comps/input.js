@@ -2,29 +2,51 @@ import React from 'react'
 import Link from 'next/link'
 import { Button } from './button'
 
+// Alla regions så att vi har dom i en array redan
+const regions = [
+  'Eu West',
+  'Eu Nordic and East',
+  'Russia',
+  'Turkey',
+  'Japan',
+  'Korea',
+  'USA',
+  'UK',
+  'China',
+  'India',
+]
+const toSlug = region => region.toLowerCase().replace(/\s/g, '-') /* Replaces all the spaces in the regions with "-" so that they are HTML friendly (Will be used in URL) */
+const getValue = (event, name) => event.target[name].value
+
+
 export class Input extends React.Component {
   render() {
     return (
+    {/* Searching input, here they put the summoner-name*/}
       <div>
         <form className="summoner-search">
           <input
             type="text"
             className="summoner-search-input"
             placeholder="Search summoner"
+            onSubmit={function(e) {window.location.hash = e.target.value; }}
           />
           <br />
-          <select name="" id="">
-            <option value="">EU west</option>
-            <option value="">EU nordic and east</option>
-            <option value="">Korea</option>
-            <option value="">Russia</option>
-            <option value="">Turkey</option>
-            <option value="">North America</option>
+
+          {/*Region choosing*/}
+          <select name="region">
+            {regions.map(region => (
+              <option value={toSlug(region)} key={region}> {/*Views all values, the toSlug(region) replaces all spaces in the region names.*/}
+                {region}
+              </option>
+            ))}
           </select>
           <Link href="#">
             <Button />
           </Link>
         </form>
+
+        {/*Styling*/}
         <style jsx global>{`
           input {
             font-size: 18px;
