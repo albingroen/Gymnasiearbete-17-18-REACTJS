@@ -15,28 +15,37 @@ const regions = [
   'China',
   'India',
 ]
-const toSlug = region => region.toLowerCase().replace(/\s/g, '-') /* Replaces all the spaces in the regions with "-" so that they are HTML friendly (Will be used in URL) */
+const toSlug = region =>
+  region
+    .toLowerCase()
+    .replace(
+      /\s/g,
+      '-',
+    ) /* Replaces all the spaces in the regions with "-" so that they are HTML friendly (Will be used in URL) */
 const getValue = (event, name) => event.target[name].value
-
 
 export class Input extends React.Component {
   render() {
     return (
-    {/* Searching input, here they put the summoner-name*/}
+      /* Searching input, here they put the summoner-name*/
       <div>
         <form className="summoner-search">
           <input
             type="text"
             className="summoner-search-input"
             placeholder="Search summoner"
-            onSubmit={function(e) {window.location.hash = e.target.value; }}
+            onSubmit={function(e) {
+              window.location.hash = e.target.value
+            }}
           />
           <br />
 
           {/*Region choosing*/}
           <select name="region">
             {regions.map(region => (
-              <option value={toSlug(region)} key={region}> {/*Views all values, the toSlug(region) replaces all spaces in the region names.*/}
+              <option value={toSlug(region)} key={region}>
+                {' '}
+                {/*Views all values, the toSlug(region) replaces all spaces in the region names.*/}
                 {region}
               </option>
             ))}
