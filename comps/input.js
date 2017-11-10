@@ -32,7 +32,6 @@ export class Input extends React.Component {
     )
   }
 
- /* TOG BORT KNAPPEN FÖR ATT DEN LINKADE TILL DASHBOARD OCH DÅ GICK DET INTE ATT ROUTA RÄTT */
   render() {
     return (
     /* Searching input, here they put the summoner-name*/
