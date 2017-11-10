@@ -10,7 +10,7 @@ app.prepare().then(() => {
   const server = express()
 
   server.get('/dashboard/:region/:userName', (req, res) => {
-    return app.render(req, res, '/dashboard', req.query)
+    return app.render(req, res, '/dashboard', {region: req.params.region, userName: req.params.userName})
   })
 
   server.get('*', (req, res) => {
