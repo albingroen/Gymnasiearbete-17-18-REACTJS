@@ -27,8 +27,8 @@ export class Input extends React.Component {
     const region = getValue(event, 'region')
 
     Router.push(
-      { pathname: '/summoner', query: { userName, region } },
-      `/summoners/${region}/${userName}`,
+      { pathname: '/dashboard', query: { userName, region } },
+      `/dashboard/${region}/${userName}`,
     )
   }
 

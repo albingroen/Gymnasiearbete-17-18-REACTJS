@@ -75,12 +75,12 @@ export class About extends React.Component {
             <h3 className="summonerName">{this.props.name}</h3>
           </li>
           <li>
-            <p>Rank</p>
+            <p>Level</p>
             <h3 className="summonerLevel">{this.props.level}</h3>
           </li>
           <li>
             <p>League</p>
-            <h3 className="summonerLane">Test</h3>
+            <h3 className="summonerLane">{this.props.rank}</h3>
           </li>
           <li>
             <p>Wins</p>

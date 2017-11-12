@@ -5,39 +5,44 @@ import { About } from '../comps/aboutsummoner.js'
 import 'isomorphic-fetch'
 
 export default class dashboard extends React.Component {
-  static async getInitialProps() {
-    const APIkey = 'RGAPI-705a4f0c-40ec-4530-87f3-89594c188c97'
-    const region = 'euw1'
-    const name = 'oscar'
-
-    const summonerRequest = await fetch(
-      `https://${region}.api.riotgames.com/lol/summoner/v3/summoners/by-name/${name}?api_key=${APIkey}`,
-    )
-    const summoner = await summonerRequest.json()
-
-    const recentRequest = await fetch(
-      `https://${region}.api.riotgames.com/lol/match/v3/matchlists/by-account/${summoner.accountId}/recent?api_key=${APIkey}`,
-    )
-    const recent = await recentRequest.json()
-
-    const leagueRequest = await fetch(
-      `https://${region}.api.riotgames.com/lol/league/v3/positions/by-summoner/${summoner.id}?api_key=${APIkey}`,
-    )
-    const league = await leagueRequest.json()
-    const latestLeagues = league[0]
-
-    return {
-      name: summoner.name,
-      level: summoner.summonerLevel,
-      recentMatches: recent.matches,
-      winsInLatestLeague: latestLeagues.wins,
+    constructor(props) {
+    super(props);
+    this.state = {
+    apiResponse: false};
     }
+    async componentWillMount() {      // Runs everytime a component loads into the client (non-server)
+    const region = "euw1"
+    const name = this.props.url.query.userName // this.properties > check the url > check the querys that the url has, and at last, check the query "userName"
+    const summonerRequest = await fetch( // To avoid CORS, we go through our own API which fetches from riots api (this is in the server.js)
+      `/api/${region}/${name}`,
+    )
+
+    const summoner = await summonerRequest.json()
+    console.log(summoner)
+    this.setState({apiResponse: summoner}) // updates state so the site renders! Makes the render function run again
   }
   render() {
+    if (this.state.apiResponse === false){ // Since we don't want to render when we haven't gotten all the info yet, it won't return anything until we do!
+      return (
+        <div>
+          <h1 className="header"> Loading... </h1>
+        <style jsx>{`
+          .header {
+            font-family: 'Roboto', sanss-serif;
+            margin-top: 100px;
+            widht: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          `}</style>
+          </div>
+      )
+    }
     return (
       <div>
         <Nav />
-        <About name={this.props.name} level={this.props.level} />
+        <About name={this.state.apiResponse.name} level={this.state.apiResponse.level} />
         <div className="line" />
 
         <div className="contenth">
@@ -48,10 +53,10 @@ export default class dashboard extends React.Component {
                 This is a summary of the latest games<br />played by this
                 specific summoner.
               </p>
-              {this.props.recentMatches.map(match => {
+              {this.state.apiResponse.recentMatches.map(match => {
                 return <p>{match.lane}</p>
               })}
-              <p>{this.props.winsInLatestLeague}</p>
+              <p>{this.state.apiResponse.winsInLatestLeague}</p>
             </div>
             <style jsx global>{`
               .contenth {
