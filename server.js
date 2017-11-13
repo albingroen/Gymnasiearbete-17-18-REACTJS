@@ -1,4 +1,3 @@
-
 const fetch = require('isomorphic-fetch')
 const express = require('express')
 const next = require('next')
@@ -11,7 +10,7 @@ app.prepare().then(() => {
   const server = express()
 
   server.get('/api/:region/:userName', async (req, res) => {
-    const APIkey = 'RGAPI-8857d373-72c1-4fe4-867e-5af9f3375d20'
+    const APIkey = 'RGAPI-7e9e5b9c-bd5c-43bb-9ad2-8a46dc6e62c4'
     const region = req.params.region
     const name = req.params.userName
 
@@ -31,7 +30,7 @@ app.prepare().then(() => {
 
     const league = await leagueRequest.json()
     const latestLeagues = league[0]
-    console.log(fetch,summonerRequest)
+    console.log(fetch, summonerRequest)
     return res.json({
       name: summoner.name,
       level: summoner.summonerLevel,
@@ -41,7 +40,10 @@ app.prepare().then(() => {
   })
 
   server.get('/dashboard/:region/:userName', (req, res) => {
-    return app.render(req, res, '/dashboard', {region: req.params.region, userName: req.params.userName})
+    return app.render(req, res, '/dashboard', {
+      region: req.params.region,
+      userName: req.params.userName,
+    })
   })
 
   server.get('*', (req, res) => {
