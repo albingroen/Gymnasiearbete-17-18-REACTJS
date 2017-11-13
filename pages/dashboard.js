@@ -30,17 +30,20 @@ export default class dashboard extends React.Component {
     if (this.state.apiResponse === false) {
       // Since we don't want to render when we haven't gotten all the info yet, it won't return anything until we do!
       return (
-        <div>
-          <h1 className="header"> Loading... </h1>
-          <style jsx>{`
-            .header {
-              font-family: 'Roboto', sanss-serif;
+        <div className="container">
+          <h1 className="title"> Loading... </h1>
+          <style jsx global>{`
+            .title {
+              font-family: 'Roboto', sans-serif;
               font-weight: normal;
-              margin-top: 100px;
-              widht: 100%;
+              color: #222;
+            }
+            .container {
+              height: 100vh;
+              width: 100%;
               display: flex;
-              align-items: center;
               justify-content: center;
+              align-items: center;
             }
           `}</style>
         </div>
@@ -56,6 +59,8 @@ export default class dashboard extends React.Component {
         <About
           name={this.state.apiResponse.name}
           level={this.state.apiResponse.level}
+          tier={this.state.apiResponse.tier}
+          rank={this.state.apiResponse.rank}
         />
         <div className="line" />
 

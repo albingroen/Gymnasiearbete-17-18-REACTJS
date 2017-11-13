@@ -24,7 +24,10 @@ export class About extends React.Component {
           </li>
           <li>
             <p>League</p>
-            <h3 className="summonerLane">{this.props.rank}</h3>
+            <h3 className="summonerLane">
+              {this.props.tier}
+              {this.props.rank}
+            </h3>
           </li>
           <li>
             <p>Wins</p>

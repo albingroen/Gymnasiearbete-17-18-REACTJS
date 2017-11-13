@@ -35,9 +35,9 @@ app.prepare().then(() => {
     return res.json({
       name: summoner.name,
       level: summoner.summonerLevel,
-      // rank: league.rank,
       recentMatches: recent.matches,
-      // winsInLatestLeague: latestLeagues.wins,
+      tier: latestLeagues.tier,
+      rank: latestLeagues.rank,
     })
   })
 
