@@ -16,7 +16,13 @@ const regions = [
   'China',
   'India',
 ]
-const toSlug = region => region.toLowerCase().replace(/\s/g, '-') /* Replaces all the spaces in the regions with "-" so that they are HTML friendly (Will be used in URL) */
+const toSlug = region =>
+  region
+    .toLowerCase()
+    .replace(
+      /\s/g,
+      '-',
+    ) /* Replaces all the spaces in the regions with "-" so that they are HTML friendly (Will be used in URL) */
 const getValue = (event, name) => event.target[name].value
 
 export class Input extends React.Component {
@@ -34,26 +40,25 @@ export class Input extends React.Component {
 
   render() {
     return (
-    /* Searching input, here they put the summoner-name*/
+      /* Searching input, here they put the summoner-name*/
       <div>
-      <form className="form" onSubmit={this.onSubmit}>
-      <input type="text" name="userName" placeholder="Search summoner..." />
-      <br />
+        <form className="form" onSubmit={this.onSubmit}>
+          <input type="text" name="userName" placeholder="Search summoner..." />
+          <br />
 
-        {/*Tuff läxa, man behöver göra kommentarer såhär inuti React komponenter.*/}
-        {/*Region choosing*/}
+          {/*Tuff läxa, man behöver göra kommentarer såhär inuti React komponenter.*/}
+          {/*Region choosing*/}
           <select name="region">
             {regions.map(region => (
-              <option value={toSlug(region)} key={region}> {/*Views all values, the toSlug(region) replaces all spaces in the region names.*/}
+              <option value={toSlug(region)} key={region}>
+                {' '}
+                {/*Views all values, the toSlug(region) replaces all spaces in the region names.*/}
                 {region}
               </option>
             ))}
           </select>
+          <Button />
         </form>
-        <Link href="#">
-            <Button />
-          </Link>
-
 
         {/*Styling!*/}
 

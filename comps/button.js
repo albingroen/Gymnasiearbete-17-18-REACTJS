@@ -5,9 +5,8 @@ export class Button extends React.Component {
   render() {
     return (
       <div>
-        <Link href="/dashboard">
-          <button className="knapp">Search</button>
-        </Link>
+        <button className="knapp">Search</button>
+
         <style jsx>{`
           button {
             background: #00c281;
