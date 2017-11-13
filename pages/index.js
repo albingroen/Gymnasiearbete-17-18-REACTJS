@@ -4,11 +4,17 @@ import { Button } from '../comps/button.js'
 import { Nav } from '../comps/nav.js'
 import { Input } from '../comps/input.js'
 import { Scrollhint } from '../comps/scrollHint.js'
+import { MyHead } from '../comps/head.js'
+import Head from 'next/head'
 
 class Index extends React.Component {
   render() {
     return (
       <div>
+        <MyHead />
+        <Head>
+          <title>Start</title>
+        </Head>
         <Nav />
         <div className="content">
           <div className="header">
