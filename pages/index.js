@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { Button } from '../comps/button.js'
 import { Nav } from '../comps/nav.js'
 import { Input } from '../comps/input.js'
-import { Scrollhint } from '../comps/scrollHint.js'
 import { MyHead } from '../comps/head.js'
 import Head from 'next/head'
 
@@ -15,62 +14,58 @@ class Index extends React.Component {
         <Head>
           <title>Start</title>
         </Head>
-        <Nav />
         <div className="content">
           <div className="header">
+            {/* <Nav /> */}
+
             <div className="headerContent">
-              <h1 className="title">Search for summoner</h1>
-              <p className="about-site">
-                Enter a summoner name to recieve the most<br />necessary
-                information about the player.
-              </p>
+              <h1 className="title">
+                Welcome human...<br />Search summoner down below.
+              </h1>
+
               <Input />
-              <Scrollhint />
             </div>
             <style jsx global>{`
-              .content {
-                width: 80%;
-                margin: 0 auto;
-                display: flex;
-                justify-content: center;
-              }
               * {
                 padding: 0;
                 margin: 0;
               }
               body {
-                background: white;
+                background: #1886e6;
+              }
+            `}</style>
+            <style jsx>{`
+              body {
+                background: #1886e6;
+              }
+              .content {
+                width: 100%;
+                margin: 0 auto;
+                display: none;
+                background-color: #1886e6;
+                margin: 0;
               }
               .header {
-                height: 80vh;
-                widht: 100%;
+                height: 100vh;
+                width: 85%;
                 display: flex;
-                align-items: center;
                 justify-content: center;
+                margin: 0 auto;
+
+                background: #1886e6;
+                flex-direction: column;
               }
-              .headerContent {
-                text-align: center;
-              }
-              .title,
-              .about-site {
-                color: #222;
-                font-family: 'Roboto', sanss-serif;
-                font-weight: normal;
-                font-size: 40px;
-                margin-bottom: 20px;
-              }
+
               .title {
-                font-weight: 300 !important;
+                color: #222;
+                font-family: 'Roboto', sans-serif;
+                font-weight: normal;
+                font-size: 50px;
+                margin-bottom: 75px;
                 letter-spacing: 0.5px;
-              }
-              .about-site {
-                font-family: 'Lato', sanss-serif;
-                font-weight: 400;
-                font-size: 17px;
-                padding-left: 20px;
-                padding-right: 20px;
-                margin-bottom: 70px;
-                opacity: 0.5;
+                color: white;
+                font-weight: lighter;
+                line-height: 70px;
               }
             `}</style>
           </div>

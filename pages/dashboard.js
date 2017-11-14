@@ -77,7 +77,7 @@ export default class dashboard extends React.Component {
               })}
               <p>{this.state.apiResponse.winsInLatestLeague}</p>
             </div>
-            <style jsx global>{`
+            <style jsx>{`
               .contenth {
                 width: 80%;
                 margin: 0 auto;
