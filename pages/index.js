@@ -31,7 +31,9 @@ class Index extends React.Component {
                 margin: 0;
               }
               body {
-                background: #1886e6;
+                background-image: url('/static/Images/lol-bg-new.png');
+                background-size: cover;
+                background-position: center;
               }
             `}</style>
             <style jsx>{`
@@ -42,7 +44,6 @@ class Index extends React.Component {
                 width: 100%;
                 margin: 0 auto;
                 display: none;
-                background-color: #1886e6;
                 margin: 0;
               }
               .header {
@@ -52,7 +53,6 @@ class Index extends React.Component {
                 justify-content: center;
                 margin: 0 auto;
 
-                background: #1886e6;
                 flex-direction: column;
               }
 
