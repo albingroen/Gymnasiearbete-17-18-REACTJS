@@ -45,6 +45,14 @@ export class About extends React.Component {
             margin: 0 auto;
             justify-content: center;
           }
+          ul,
+          li {
+            display: inline-block;
+          }
+          li {
+            padding: 30px;
+            color: white;
+          }
           @media screen and (max-width: 1000px) {
             .contentd {
               width: 80%;

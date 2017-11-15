@@ -5,55 +5,62 @@ export class Nav extends React.Component {
   render() {
     return (
       <div>
-        <div className="content">
-          <nav>
-            <ul>
-              <li>
-                <Link href="/">
-                  <a href="">Home</a>
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav>
+          <ul>
+            <li>
+              <Link href="/">
+                <a href="">Lolstats.se</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <a href="">Home</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <a href="">Contact</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <a href="">Help</a>
+              </Link>
+            </li>
+          </ul>
+        </nav>
 
         <style jsx>{`
-          .content {
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: flex-start;
-            background: #1886e6;
+          * {
             margin: 0;
+            padding: 0;
           }
           nav {
             width: 100%;
+            height: 65px;
+            background: #5f59ff;
             display: flex;
-            justify-content: flex-start;
-            margin-top: 40px;
+            align-items: center;
+            justify-content: center;
           }
           ul {
-            display: inline-block;
+            width: 70%;
           }
+          ul,
           li {
             display: inline-block;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
           }
           a {
             color: white;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Open sans', sans-serif;
+            font-weight: lighter;
             text-decoration: none;
-            font-weight: 400;
-            text-transform: uppercase;
-            font-size: 20px;
-            letter-spacing: 1px;
-          }
-          a:hover {
-            color: #08cc8b;
-          }
-          @media screen and (max-width: 800px) {
-            nav {
-              display: none;
-            }
+            font-size: 15px;
+            padding: 15px;
+            letter-spacing: 0.5px;
           }
         `}</style>
       </div>

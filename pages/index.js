@@ -14,62 +14,62 @@ class Index extends React.Component {
         <Head>
           <title>Start</title>
         </Head>
-        <div className="content">
-          <div className="header">
-            {/* <Nav /> */}
-
-            <div className="headerContent">
-              <h1 className="title">
-                Welcome human...<br />Search summoner down below.
-              </h1>
-
-              <Input />
-            </div>
-            <style jsx global>{`
-              * {
-                padding: 0;
-                margin: 0;
-              }
-              body {
-                background-image: url('/static/Images/lol-bg-new.png');
-                background-size: cover;
-                background-position: center;
-              }
-            `}</style>
-            <style jsx>{`
-              body {
-                background: #1886e6;
-              }
-              .content {
-                width: 100%;
-                margin: 0 auto;
-                display: none;
-                margin: 0;
-              }
-              .header {
-                height: 100vh;
-                width: 85%;
-                display: flex;
-                justify-content: center;
-                margin: 0 auto;
-
-                flex-direction: column;
-              }
-
-              .title {
-                color: #222;
-                font-family: 'Roboto', sans-serif;
-                font-weight: normal;
-                font-size: 50px;
-                margin-bottom: 75px;
-                letter-spacing: 0.5px;
-                color: white;
-                font-weight: lighter;
-                line-height: 70px;
-              }
-            `}</style>
+        <Nav />
+        <div className="header">
+          <div className="headerContent">
+            <h1 className="title">Search for summoner...</h1>
+            <Input />
           </div>
         </div>
+        <div className="browse" />
+        <style jsx global>{`
+          body {
+            background: #f7f7f7;
+            padding: 0;
+            margin: 0;
+          }
+        `}</style>
+        <style jsx>{`
+          * {
+            padding: 0;
+            margin: 0;
+          }
+          .header {
+            width: 70%;
+            background: #f7f7f7;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            height: 70vh;
+            align-items: center;
+          }
+          .headerContent {
+            height: 363px;
+            width: 400px;
+            background: white;
+            border-radius: 2px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 25px;
+            -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+          }
+          .title {
+            font-size: 25px;
+            color: #222;
+            font-family: 'Open sans', sans-serif;
+            text-align: left;
+            font-weight: normal;
+            align-self: flex-start;
+          }
+          .browse {
+            width: 100%;
+            height: 1000px;
+            background: white;
+          }
+        `}</style>
       </div>
     )
   }

@@ -59,59 +59,33 @@ export class Input extends React.Component {
           </select>
           <Button />
         </form>
-
-        {/*Styling!*/}
-
-        <style jsx global>{`
+        <style jsx>{`
           form {
-            display: flex;
-            flex-direction: row;
-            height: 60px;
-            width: 65%;
+            width: 400px;
           }
-
           input {
-            font-size: 18px;
-            border-right: 1px solid rgba(0, 0, 0, 0.4) !important;
-            background: white;
-            width: 300px;
-            border-radius: 3px 0px 0px 3px;
-            padding: 20px;
-            font-weight: 400;
-            border: none;
+            height: 45px;
+            font-size: 15px;
+            width: 379px;
+            padding-left: 20px;
             color: #222;
-            font-family: 'Roboto', sans-serif;
-            transition: 0.2s ease-out 0.05s;
+            font-family: 'Open sans', sans-serif;
+            margin-top: 30px;
+            border-radius: 2px;
+            border: none;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            transition: 0.2s ease-out 0.2s;
+            margin-bottom: 20px;
           }
           input:focus {
             outline: none;
           }
           input::placeholder {
-            transition: 0.1s ease-out 0.1s;
-            opacity: 0.5;
+            color: rgba(0, 0, 0, 0.4);
           }
           input:focus::placeholder {
-            opacity: 0.1;
-            transition: 0.1s ease-out 0.1s;
-          }
-          .choose-region {
-            appearance: none;
-            -moz-appearance: none;
-            -webkite-appearance: none;
-            border-radius: 0px;
-            background: white;
-            color: #333;
-            border: none;
-            text-align: center;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            paddding-right: 0px !important;
-            font-size: 18px;
-            width: 250px;
-            padding-left: 20px;
-          }
-          .choose-region:focus {
-            outline: none;
+            color: rgba(0, 0, 0, 0.2);
+            transition: 0.2s ease-out 0.2s;
           }
         `}</style>
       </div>
