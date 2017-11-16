@@ -53,7 +53,7 @@ export default class dashboard extends React.Component {
       <div>
         <MyHead />
         <Head>
-          <title>Summoner: {this.state.apiResponse.name}'s dashboard</title>
+          <title>Summoner {this.state.apiResponse.name}'s dashboard</title>
         </Head>
         <Nav />
         <About
@@ -61,21 +61,17 @@ export default class dashboard extends React.Component {
           level={this.state.apiResponse.level}
           tier={this.state.apiResponse.tier}
           rank={this.state.apiResponse.rank}
+          wins={this.state.apiResponse.wins}
         />
         <div className="line" />
 
         <div className="contenth">
           <div className="header">
             <div className="headerContent">
-              <h1 className="title">Latest games</h1>
-              <p className="about-site">
-                This is a summary of the latest games<br />played by this
-                specific summoner.
-              </p>
-              {this.state.apiResponse.recentMatches.map(match => {
+              {/* {this.state.apiResponse.recentMatches.map(match => {
                 return <p>{match.lane}</p>
-              })}
-              <p>{this.state.apiResponse.winsInLatestLeague}</p>
+              })} */}
+              {/* <p>{this.state.apiResponse.winsInLatestLeague}</p> */}
             </div>
             <style jsx global>{`
               * {
@@ -83,7 +79,7 @@ export default class dashboard extends React.Component {
                 margin: 0;
               }
               body {
-                background: #1886e6;
+                background: #f7f7f7;
               }
             `}</style>
             <style jsx>{`

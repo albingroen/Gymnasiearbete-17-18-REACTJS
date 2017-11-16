@@ -16,10 +16,18 @@ class Index extends React.Component {
         </Head>
         <Nav />
         <div className="header">
+          <div className="icons">
+            <img src="/static/Images/sword-icon-01.png" alt="" />
+            <img src="/static/Images/path-icon-01.png" alt="" />
+            <img src="/static/Images/tower-icon-01.png" alt="" />
+          </div>
           <div className="headerContent">
             <h1 className="title">Search for summoner...</h1>
             <Input />
           </div>
+          <p className="dataInfo">
+            We get all of our stats from Riotgames™ API.
+          </p>
         </div>
         <div className="browse" />
         <style jsx global>{`
@@ -27,6 +35,12 @@ class Index extends React.Component {
             background: #f7f7f7;
             padding: 0;
             margin: 0;
+          }
+          .dataInfo {
+            font-family: 'Open sans', sans-serif;
+            font-weight: normal;
+            color: #222;
+            opacity: 0.75;
           }
         `}</style>
         <style jsx>{`
@@ -40,11 +54,12 @@ class Index extends React.Component {
             margin: 0 auto;
             display: flex;
             justify-content: center;
-            height: 70vh;
+            height: 85vh;
+            flex-direction: column;
             align-items: center;
           }
           .headerContent {
-            height: 363px;
+            height: 350px;
             width: 400px;
             background: white;
             border-radius: 2px;
@@ -52,9 +67,7 @@ class Index extends React.Component {
             justify-content: center;
             flex-direction: column;
             padding: 25px;
-            -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
-            -moz-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
-            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
+            margin-bottom: 40px;
           }
           .title {
             font-size: 25px;
@@ -63,6 +76,17 @@ class Index extends React.Component {
             text-align: left;
             font-weight: normal;
             align-self: flex-start;
+          }
+          .icons {
+            display: flex;
+            width: 390px;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-end;
+            margin-bottom: 50px;
+          }
+          img {
+            width: 100px;
           }
           .browse {
             width: 100%;

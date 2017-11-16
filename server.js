@@ -10,7 +10,7 @@ app.prepare().then(() => {
   const server = express()
 
   server.get('/api/:region/:userName', async (req, res) => {
-    const APIkey = 'RGAPI-1a6d8bee-2fee-4b50-b35a-12bbe9a051da'
+    const APIkey = 'RGAPI-31163ac5-ae67-4501-8711-7530cb9e7b67'
     const region = req.params.region
     const name = req.params.userName
 
@@ -38,6 +38,7 @@ app.prepare().then(() => {
       recentMatches: recent.matches,
       tier: latestLeagues.tier,
       rank: latestLeagues.rank,
+      wins: latestLeagues.wins,
     })
   })
 
