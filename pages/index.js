@@ -68,6 +68,9 @@ class Index extends React.Component {
             flex-direction: column;
             padding: 25px;
             margin-bottom: 40px;
+            -webkit-box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.1);
+            -moz-box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.1);
+            box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.1);
           }
           .title {
             font-size: 25px;

@@ -71,6 +71,9 @@ export class About extends React.Component {
             margin-top: 2%;
             display: flex;
             align-items: center;
+            -webkit-box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.1);
+            -moz-box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.1);
+            box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.1);
           }
           h2 {
             padding-left: 30px;
