@@ -68,6 +68,8 @@ export default class dashboard extends React.Component {
         <div className="contenth">
           <div className="header">
             <div className="headerContent">
+              <div className="containerIllustration" />
+              <h2>No more stats available here...</h2>
               {/* {this.state.apiResponse.recentMatches.map(match => {
                 return <p>{match.lane}</p>
               })} */}
@@ -89,7 +91,21 @@ export default class dashboard extends React.Component {
                 display: flex;
                 justify-content: center;
               }
-
+              .containerIllustration {
+                height: 200px;
+                width: 500px;
+                background-image: url('/static/Images/containerIllustration-01.png');
+                background-size: cover;
+                background-position: center center;
+                opacity: 0.5;
+              }
+              h2 {
+                color: #222;
+                opacity: 0.75;
+                font-family: 'Open sans', sans-serif;
+                margin-top: 30px;
+                font-weight: normal;
+              }
               .header {
                 margin-top: 100px;
                 widht: 100%;

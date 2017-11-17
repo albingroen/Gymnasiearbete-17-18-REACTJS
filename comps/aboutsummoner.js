@@ -55,6 +55,11 @@ export class About extends React.Component {
         {/* <h3 className="summonerScore">87</h3> */}
 
         <style jsx>{`
+          .containerIllustration {
+            margin: 0 auto;
+            width: 550px;
+            height: 200px;
+          }
           .wrapper {
             width: 70%;
             padding-top: 50px;
@@ -71,9 +76,9 @@ export class About extends React.Component {
             margin-top: 2%;
             display: flex;
             align-items: center;
-            -webkit-box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.1);
-            -moz-box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.1);
-            box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.1);
+            -webkit-box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.05);
+            -moz-box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.05);
+            box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.05);
           }
           h2 {
             padding-left: 30px;

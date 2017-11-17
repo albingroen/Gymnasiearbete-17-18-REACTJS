@@ -38,8 +38,7 @@ export class Nav extends React.Component {
           nav {
             width: 100%;
             height: 65px;
-            background: white;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+            background: #5f59ff;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -55,7 +54,7 @@ export class Nav extends React.Component {
             margin: 0;
           }
           a {
-            color: #222;
+            color: white;
             font-family: 'Open sans', sans-serif;
             font-weight: lighter;
             text-decoration: none;
