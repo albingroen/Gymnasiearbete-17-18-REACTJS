@@ -10,7 +10,7 @@ app.prepare().then(() => {
   const server = express()
 
   server.get('/api/:region/:userName', async (req, res) => {
-    const APIkey = 'RGAPI-795c3b48-2bd5-41e1-8a1c-64fc2e8c1016'
+    const APIkey = 'RGAPI-9bd5728b-d275-417c-be1c-881fcff57f9d'
     const region = req.params.region
     const name = req.params.userName
 
