@@ -29,7 +29,12 @@ app.prepare().then(() => {
     )
 
     const league = await leagueRequest.json()
-    const latestLeagues = league[0]
+    const latestLeagues = league[0] ||
+     {
+       tier: null,
+       rank: "Unranked",
+       wins: "0",
+     }
     console.log(fetch, summonerRequest)
 
     return res.json({
