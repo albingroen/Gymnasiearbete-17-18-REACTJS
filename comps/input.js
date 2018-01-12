@@ -48,40 +48,44 @@ export class Input extends React.Component {
 
           {/*Tuff läxa, man behöver göra kommentarer såhär inuti React komponenter.*/}
           {/*Region choosing*/}
-          <select class="choose-region" name="region">
+          {/* <select className="choose-region" name="region">
             {regions.map(region => (
               <option value={toSlug(region)} key={region}>
                 {' '}
-                {/*Views all values, the toSlug(region) replaces all spaces in the region names.*/}
                 {region}
               </option>
             ))}
-          </select>
+          </select> */}
           <Button />
         </form>
         <style jsx>{`
           form {
             width: 400px;
+            display: flex;
+            flex-direction: row;
           }
           input {
             height: 45px;
             font-size: 15px;
             width: 379px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
             padding-left: 20px;
-            color: #222;
+            color: white;
             font-family: 'Open sans', sans-serif;
             margin-top: 30px;
-            border-radius: 2px;
+            border-radius: 2px 0px 0px 2px;
             border: none;
             border: 1px solid rgba(0, 0, 0, 0.2);
             transition: 0.2s ease-out 0.2s;
             margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.1);
           }
           input:focus {
             outline: none;
           }
           input::placeholder {
-            color: rgba(0, 0, 0, 0.4);
+            color: rgba(255, 2555, 255, 0.4);
           }
           input:focus::placeholder {
             color: rgba(0, 0, 0, 0.2);

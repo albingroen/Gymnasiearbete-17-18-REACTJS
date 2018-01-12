@@ -1,70 +1,79 @@
 import React from 'react'
 import Link from 'next/link'
 
+const Items = {
+  item1: 'Lolstats',
+  item2: 'Home',
+  item3: 'Search',
+  item4: 'About',
+  item5: 'Contact',
+}
+
+const ListItemStyle = {
+  display: 'inlineBlock',
+  listStyleType: 'none',
+  padding: 0,
+  margin: 0,
+  color: 'white',
+  textTransform: 'uppercase',
+}
+
+const AnckorStyle = {
+  color: 'white',
+  fontFamily: 'Open sans',
+  fontWeight: 'lighter',
+  textDecoration: 'none',
+  fontSize: '12px',
+  paddingTop: '15px',
+  paddingBottom: '15px',
+  paddingRight: '90px',
+  letterSpacing: '1px',
+  fontWeight: 'normal',
+}
+
+const NavStyle = {
+  margin: '0 auto',
+  height: '80px',
+  background: '#222',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}
+
+const ListStyle = {
+  display: 'inline-flex',
+  flexWrap: 'wrap',
+}
+
 export class Nav extends React.Component {
   render() {
     return (
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link href="/">
-                <a href="">Lolstats.se</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a href="">Home</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a href="">Contact</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/">
-                <a href="">Help</a>
-              </Link>
-            </li>
+        <nav style={NavStyle}>
+          <ul style={ListStyle}>
+            <NavItem item={Items.item1} path="/" />
+            <NavItem item={Items.item2} path="/" />
+            <NavItem item={Items.item3} path="/" />
+            <NavItem item={Items.item4} path="/" />
+            <NavItem item={Items.item5} path="/" />
           </ul>
         </nav>
+      </div>
+    )
+  }
+}
 
-        <style jsx>{`
-          * {
-            margin: 0;
-            padding: 0;
-          }
-          nav {
-            width: 100%;
-            height: 65px;
-            background: #5f59ff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          ul {
-            width: 70%;
-          }
-          ul,
-          li {
-            display: inline-block;
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-          }
-          a {
-            color: white;
-            font-family: 'Open sans', sans-serif;
-            font-weight: lighter;
-            text-decoration: none;
-            font-size: 15px;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            padding-right: 25px;
-            letter-spacing: 0.5px;
-          }
-        `}</style>
+class NavItem extends React.Component {
+  render() {
+    return (
+      <div>
+        <li style={ListItemStyle}>
+          <Link to={this.props.path}>
+            <a style={AnckorStyle} href="">
+              {this.props.item}
+            </a>
+          </Link>
+        </li>
       </div>
     )
   }

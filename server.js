@@ -10,7 +10,7 @@ app.prepare().then(() => {
   const server = express()
 
   server.get('/api/:region/:userName', async (req, res) => {
-    const APIkey = 'RGAPI-9bd5728b-d275-417c-be1c-881fcff57f9d'
+    const APIkey = 'RGAPI-0a5138b3-c400-48ac-9464-6374883b74da'
     const region = req.params.region
     const name = req.params.userName
 
@@ -20,12 +20,16 @@ app.prepare().then(() => {
     const summoner = await summonerRequest.json()
 
     const recentRequest = await fetch(
-      `https://${region}.api.riotgames.com/lol/match/v3/matchlists/by-account/${summoner.accountId}/recent?api_key=${APIkey}`,
+      `https://${region}.api.riotgames.com/lol/match/v3/matchlists/by-account/${
+        summoner.accountId
+      }/recent?api_key=${APIkey}`,
     )
     const recent = await recentRequest.json()
 
     const leagueRequest = await fetch(
-      `https://${region}.api.riotgames.com/lol/league/v3/positions/by-summoner/${summoner.id}?api_key=${APIkey}`,
+      `https://${region}.api.riotgames.com/lol/league/v3/positions/by-summoner/${
+        summoner.id
+      }?api_key=${APIkey}`,
     )
 
     const league = await leagueRequest.json()

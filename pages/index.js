@@ -15,7 +15,7 @@ class Index extends React.Component {
           <title>Start</title>
         </Head>
         <Nav />
-        <div className="header">
+        {/* <div className="header">
           <div className="icons">
             <img src="/static/Images/sword-icon-01.png" alt="" />
             <img src="/static/Images/path-icon-01.png" alt="" />
@@ -28,73 +28,15 @@ class Index extends React.Component {
           <p className="dataInfo">
             We get all of our stats from Riotgames™ API.
           </p>
-        </div>
-        <div className="browse" />
+        </div> */}
+        <MainHead />
+        <SubNav />
+        <Card />
         <style jsx global>{`
           body {
-            background: #f7f7f7;
+            background: #f4f4f4;
             padding: 0;
             margin: 0;
-          }
-          .dataInfo {
-            font-family: 'Open sans', sans-serif;
-            font-weight: normal;
-            color: #222;
-            opacity: 0.75;
-          }
-        `}</style>
-        <style jsx>{`
-          * {
-            padding: 0;
-            margin: 0;
-          }
-          .header {
-            width: 70%;
-            background: #f7f7f7;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            height: 85vh;
-            flex-direction: column;
-            align-items: center;
-          }
-          .headerContent {
-            height: 350px;
-            width: 400px;
-            background: white;
-            border-radius: 2px;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            padding: 25px;
-            margin-bottom: 40px;
-            -webkit-box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.05);
-            -moz-box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.05);
-            box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.05);
-          }
-          .title {
-            font-size: 25px;
-            color: #222;
-            font-family: 'Open sans', sans-serif;
-            text-align: left;
-            font-weight: normal;
-            align-self: flex-start;
-          }
-          .icons {
-            display: flex;
-            width: 390px;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: flex-end;
-            margin-bottom: 50px;
-          }
-          img {
-            width: 100px;
-          }
-          .browse {
-            width: 100%;
-            height: 1000px;
-            background: white;
           }
         `}</style>
       </div>
@@ -103,3 +45,150 @@ class Index extends React.Component {
 }
 
 export default Index
+
+// Header
+
+const MainHeadStyle = {
+  width: '100%',
+  height: '550px',
+  backgroundImage: 'url(../static/Images/bg.png)',
+  backgroundSize: 'cover',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexDirection: 'column',
+}
+
+const Title = {
+  color: 'white',
+  fontFamily: 'Lato',
+  fontWeight: '300',
+  fontSize: '40px',
+  letterSpacing: '.5px',
+  margin: 0,
+  padding: 0,
+  textAlign: 'center',
+}
+
+const Paragraph = {
+  color: 'white',
+  fontFamily: 'Lato',
+  fontWeight: '300',
+  maxWidth: '600px',
+  lineHeight: '25px',
+  textAlign: 'center',
+  opacity: '.6',
+}
+
+class MainHead extends React.Component {
+  render() {
+    return (
+      <div style={MainHeadStyle} className="head">
+        <h1 style={Title}>Search summoner and recieve critical stats.</h1>
+        <p style={Paragraph}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nemo
+          doloribus, voluptas aspernatur quasi minus error, exercitationem
+        </p>
+        <Input />
+      </div>
+    )
+  }
+}
+
+// SubNav
+
+const wrapper = {
+  width: '100%',
+  height: '70px',
+  background: 'white',
+}
+
+const SubNavStyle = {
+  maxWidth: '1350px',
+  margin: '0 auto',
+  height: '100%',
+  background: 'white',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+}
+
+const hover = {
+  borderBottom: '2.5px solid cornflowerblue',
+}
+
+const partAnckor = {
+  textTransform: 'uppercase',
+  letterSpacing: '.5px',
+  fontSize: '14px',
+  fontWeight: 'normal',
+  textDecoration: 'none',
+  color: '#333',
+}
+
+class SubNav extends React.Component {
+  render() {
+    return (
+      <div style={wrapper}>
+        <div style={SubNavStyle}>
+          <div className="part">
+            <a style={partAnckor} href="">
+              Season 1
+            </a>
+          </div>
+          <div className="part">
+            <a style={partAnckor} href="">
+              Season 2
+            </a>
+          </div>
+          <div className="part">
+            <a style={partAnckor} href="">
+              Season 3
+            </a>
+          </div>
+          <div className="part">
+            <a style={partAnckor} href="">
+              Season 4
+            </a>
+          </div>
+        </div>
+        <style jsx>{`
+          .part {
+            height: 100%;
+            width: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-family: Roboto;
+            border-right: 0.5px solid #f4f4f4;
+            border-left: 0.5px solid #f4f4f4;
+            cursor: pointer;
+          }
+          .part:hover {
+            border-bottom: 2.5px solid cornflowerblue;
+          }
+        `}</style>
+      </div>
+    )
+  }
+}
+
+// Card
+
+const CardStyle = {
+  maxWidth: '1350px',
+  margin: '50px',
+  height: '650px',
+  background: 'white',
+  borderRadius: '5px',
+  margin: '0 auto',
+  marginTop: '50px',
+  marginBottom: '50px',
+}
+
+class Card extends React.Component {
+  render() {
+    return <div style={CardStyle} />
+  }
+}
