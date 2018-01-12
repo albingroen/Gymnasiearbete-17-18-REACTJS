@@ -26,7 +26,7 @@ class Index extends React.Component {
             <Input />
           </div>
           <p className="dataInfo">
-            We get all of our stats from Riotgames™ API.
+            All data is retrieved from Riotgames™ API.
           </p>
         </div> */}
         <MainHead />
