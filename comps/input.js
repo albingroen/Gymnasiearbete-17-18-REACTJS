@@ -46,16 +46,16 @@ export class Input extends React.Component {
           <input type="text" name="userName" placeholder="Search summoner..." />
           <br />
 
-          {/*Tuff läxa, man behöver göra kommentarer såhär inuti React komponenter.*/}
+          {/*Tuff  läxa, man behöver göra kommentarer såhär inuti React komponenter.*/}
           {/*Region choosing*/}
-          {/* <select className="choose-region" name="region">
+          <select className="chooseRegion" name="region">
             {regions.map(region => (
               <option value={toSlug(region)} key={region}>
                 {' '}
                 {region}
               </option>
             ))}
-          </select> */}
+          </select>
           <Button />
         </form>
         <style jsx>{`
@@ -76,7 +76,6 @@ export class Input extends React.Component {
             margin-top: 30px;
             border-radius: 2px 0px 0px 2px;
             border: none;
-            border: 1px solid rgba(0, 0, 0, 0.2);
             transition: 0.2s ease-out 0.2s;
             margin-bottom: 20px;
             background: rgba(255, 255, 255, 0.1);
@@ -91,8 +90,48 @@ export class Input extends React.Component {
             color: rgba(0, 0, 0, 0.2);
             transition: 0.2s ease-out 0.2s;
           }
+          .chooseRegion {
+            height: 47px;
+            font-size: 15px;
+            width: 150px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            padding-left: 20px;
+            color: white;
+            font-family: 'Open sans', sans-serif;
+            margin-top: 30px;
+            appearance: none;
+            border: none;
+            border-radius: 0px;
+            transition: 0.2s ease-out 0.2s;
+
+            background: rgba(255, 255, 255, 0.1);
+          }
+          .chooseRegion:focus {
+            outline: none;
+          }
         `}</style>
       </div>
     )
   }
 }
+
+// .boxInput {
+// 	border-radius: 5px;
+// 	display: block;
+// 	margin-top: 50px;
+// 	background: none;
+// 	border: 1px solid #f1f1f1;
+// 	color: #222;
+// 	width: 100%;
+// 	padding-left: 20px;
+// 	letter-spacing: 0.5px;
+
+// 	transition: 0.1s ease-out 0s;
+// }
+
+// .boxInput::placeholder {
+// 	color: lightgrey;
+// 	font-weight: 400;
+// 	transition: 0.1s ease-out 0s;
+// }

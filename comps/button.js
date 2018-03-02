@@ -26,7 +26,7 @@ export class Button extends React.Component {
             border: none;
             cursor: pointer;
             transition: 0.1s ease-out 0.1s;
-            margin-top: 31px;
+            margin-top: 30px;
           }
           .button:hover {
             background: #6b66f0;

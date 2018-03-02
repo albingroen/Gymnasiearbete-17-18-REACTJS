@@ -31,8 +31,11 @@ export default class dashboard extends React.Component {
       // Since we don't want to render when we haven't gotten all the info yet, it won't return anything until we do!
       return (
         <div className="container">
-          <h1 className="title"> Loading... </h1>
+          <h1 className="title"> Getting data from Riot... Please wait... </h1>
           <style jsx global>{`
+            ::-webkit-scrollbar {
+              display: none;
+            }
             .title {
               font-family: 'Roboto', sans-serif;
               font-weight: normal;
@@ -56,12 +59,15 @@ export default class dashboard extends React.Component {
           <title>Summoner {this.state.apiResponse.name}'s dashboard</title>
         </Head>
         <Nav />
+
         <About
           name={this.state.apiResponse.name}
           level={this.state.apiResponse.level}
           tier={this.state.apiResponse.tier}
           rank={this.state.apiResponse.rank}
           wins={this.state.apiResponse.wins}
+          losses={this.state.apiResponse.losses}
+          leagueName={this.state.apiResponse.leagueName}
         />
         <div className="line" />
 

@@ -68,7 +68,7 @@ class NavItem extends React.Component {
     return (
       <div>
         <li style={ListItemStyle}>
-          <Link to={this.props.path}>
+          <Link href={this.props.path}>
             <a style={AnckorStyle} href="">
               {this.props.item}
             </a>

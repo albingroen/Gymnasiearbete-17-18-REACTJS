@@ -10,7 +10,7 @@ app.prepare().then(() => {
   const server = express()
 
   server.get('/api/:region/:userName', async (req, res) => {
-    const APIkey = 'RGAPI-0a5138b3-c400-48ac-9464-6374883b74da'
+    const APIkey = 'RGAPI-d3aab144-48b1-46d3-aaac-44b6748e6a10'
     const region = req.params.region
     const name = req.params.userName
 
@@ -33,12 +33,12 @@ app.prepare().then(() => {
     )
 
     const league = await leagueRequest.json()
-    const latestLeagues = league[0] ||
-     {
-       tier: null,
-       rank: "Unranked",
-       wins: "0",
-     }
+    const latestLeagues = league[0] || {
+      tier: null,
+      rank: 'Unranked',
+      wins: '0',
+      losses: '0',
+    }
     console.log(fetch, summonerRequest)
 
     return res.json({
@@ -48,6 +48,8 @@ app.prepare().then(() => {
       tier: latestLeagues.tier,
       rank: latestLeagues.rank,
       wins: latestLeagues.wins,
+      losses: latestLeagues.losses,
+      leagueName: latestLeagues.leagueName,
     })
   })
 
