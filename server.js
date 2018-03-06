@@ -20,9 +20,15 @@ app.prepare().then(() => {
     const recentRequest = await fetch(`https://${region}.api.riotgames.com/lol/match/v3/matchlists/by-account/${summoner.accountId}/recent?api_key=${APIkey}`,)
     const recent = await recentRequest.json()
 
-    const leagueRequest = await fetch(`https://${region}.api.riotgames.com/lol/league/v3/positions/by-summoner/${summoner.id}?api_key=${APIkey}`,)
+    const matchRequest = await fetch(`https://${region}.api.riotgames.com/lol/match/v3/matches/${recent.gameId}?api_key=${APIkey}`,)
+    const match = await matchRequest.json()
 
+    const leagueRequest = await fetch(`https://${region}.api.riotgames.com/lol/league/v3/positions/by-summoner/${summoner.id}?api_key=${APIkey}`,)
     const league = await leagueRequest.json()
+
+
+    
+
     const latestLeagues = league[0] || {
       tier: null,
       rank: 'Unranked',
@@ -40,7 +46,7 @@ app.prepare().then(() => {
       rank: latestLeagues.rank,
       wins: latestLeagues.wins,
       losses: latestLeagues.losses,
-      leagueName: latestLeagues.leagueName
+      leagueName: latestLeagues.leagueName,
     })
   })
 

@@ -56,6 +56,7 @@ export class About extends React.Component {
             {this.props.leagueName}
           </h2>
         </div>
+      
 
         {/* <h3 className="summonerName">{this.props.name}</h3> */}
 

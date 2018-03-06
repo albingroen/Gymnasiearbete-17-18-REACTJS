@@ -3,11 +3,12 @@ import Link from 'next/link'
 import { Nav } from '../comps/nav.js'
 import { About } from '../comps/aboutsummoner.js'
 import { MyHead } from '../comps/head.js'
+import { Match } from '../comps/match.js'
 import 'isomorphic-fetch'
 import Head from 'next/head'
 
 export default class dashboard extends React.Component {
-  constructor(props) {
+  constructor(props) { 
     super(props)
     this.state = {
       apiResponse: false,
@@ -21,8 +22,8 @@ export default class dashboard extends React.Component {
       // To avoid CORS, we go through our own API which fetches from riots api (this is in the server.js)
       `/api/${region}/${name}`,
     )
-
     const summoner = await summonerRequest.json()
+
     console.log(summoner)
     this.setState({ apiResponse: summoner }) // updates state so the site renders! Makes the render function run again
   }
@@ -56,7 +57,7 @@ export default class dashboard extends React.Component {
       <div>
         <MyHead />
         <Head>
-          <title>Summoner {this.state.apiResponse.name}'s dashboard</title>
+          <title>Summoner {this.state.apiResponse.name}´s dashboard</title>
         </Head>
         <Nav />
 
@@ -71,14 +72,19 @@ export default class dashboard extends React.Component {
         />
         <div className="line" />
 
+        {this.state.apiResponse.recentMatches.map(match => {
+          return <Match lane={match.lane} champion={match.champion} id={match.gameId}  />
+        })}
+
         <div className="contenth">
           <div className="header">
             <div className="headerContent">
               <div className="containerIllustration" />
               <h2>No more stats available here...</h2>
-              {/* {this.state.apiResponse.recentMatches.map(match => {
-                return <p>{match.lane}</p>
-              })} */}
+
+
+
+
               {/* <p>{this.state.apiResponse.winsInLatestLeague}</p> */}
             </div>
             <style jsx global>{`
